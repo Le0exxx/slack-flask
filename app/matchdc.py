@@ -42,6 +42,19 @@ dcmap0 = {
     'dc21': 'Santa Clara',
     'dc22': 'Dubai',
     'dc23': 'Riyadh',
+    'Sydney': 'DC10',
+    'ROT': 'DC12, DC13',
+    'Shanghai': 'DC15',
+    'Biere': 'DC16',
+    'Toronto': 'DC17',
+    'Moscow': 'DC18',
+    'Sao Paulo': 'DC19',
+    'Amsterdam': 'DC2',
+    'Chandler1': 'DC4',
+    'Ashburn': 'DC8',
+    'Santa Clara': 'DC21',
+    'Dubai': 'DC22',
+    'Riyadh': 'DC23'
 }
 
 
