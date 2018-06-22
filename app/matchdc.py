@@ -58,22 +58,21 @@ dcmap0 = {
 }
 
 
-dcmap = {
-    'dc10': 'Sydney',
-    'dc12': 'ROT',
-    'dc13': 'ROT',
-    'dc15': 'Shanghai',
-    'dc16': 'Biere',
-    'dc17': 'Toronto',
-    'dc18': 'Moscow',
-    'dc19': 'Sao Paulo',
-    'dc2': 'Amsterdam',
-    'dc4': 'Chandler1',
-    'dc8': 'Ashburn',
-    'dc21': 'Santa Clara',
-    'dc22': 'Dubai',
-    'dc23': 'Riyadh',
-}
+dcmap = ('dc10-> Sydney\n'
+    'dc12-> ROT\n'
+    'dc13-> ROT\n'
+    'dc15-> Shanghai\n'
+    'dc16-> Biere\n'
+    'dc17-> Toronto\n'
+    'dc18-> Moscow\n'
+    'dc19-> Sao Paulo\n'
+    'dc2-> Amsterdam\n'
+    'dc4-> Chandler1\n'
+    'dc8-> Ashburn\n'
+    'dc21-> Santa Clara\n'
+    'dc22-> Dubai\n'
+    'dc23-> Riyadh\n')
+
 
 def match(dc):
     if dc in dcmap0:
