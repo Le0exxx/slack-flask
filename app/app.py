@@ -1,8 +1,8 @@
 from flask import Flask, jsonify, request
-from matchdc import match,dcmap
+from matchdc import match, dcmap
+import json
 
 app = Flask(__name__)
-
 
 @app.route('/')
 def hello_world():
@@ -17,10 +17,9 @@ def slash():
             else:
                 payload = {'text': 'DC Not Found'}
         else:
-            Payload = {'text': 'please input DC you want to query with format: /dcmap DC10'}
-        #payload = {'text': 'DC15 Shanghai'}
+            payload = {'text': json.dumps(dcmap)}
         return jsonify(payload)
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(host='0.0.0.0', debug=True, port=80)
