@@ -1,6 +1,5 @@
 from flask import Flask, jsonify, request
 from matchdc import match, dcmap
-import json
 
 app = Flask(__name__)
 
@@ -17,7 +16,7 @@ def slash():
             else:
                 payload = {'text': 'DC Not Found'}
         else:
-            payload = {'text': json.dumps(dcmap)}
+            payload = {'text': dcmap}
         return jsonify(payload)
 
 
