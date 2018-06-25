@@ -1,19 +1,5 @@
 #
 dcmap0 = {
-    'DC10': 'Sydney',
-    'DC12': 'ROT',
-    'DC13': 'ROT',
-    'DC15': 'Shanghai',
-    'DC16': 'Biere',
-    'DC17': 'Toronto',
-    'DC18': 'Moscow',
-    'DC19': 'Sao Paulo',
-    'DC2': 'Amsterdam',
-    'DC4': 'Chandler1',
-    'DC8': 'Ashburn',
-    'DC21': 'Santa Clara',
-    'DC22': 'Dubai',
-    'DC23': 'Riyadh',
     '10': 'Sydney',
     '12': 'ROT',
     '13': 'ROT',
@@ -28,33 +14,19 @@ dcmap0 = {
     '21': 'Santa Clara',
     '22': 'Dubai',
     '23': 'Riyadh',
-    'dc10': 'Sydney',
-    'dc12': 'ROT',
-    'dc13': 'ROT',
-    'dc15': 'Shanghai',
-    'dc16': 'Biere',
-    'dc17': 'Toronto',
-    'dc18': 'Moscow',
-    'dc19': 'Sao Paulo',
-    'dc2': 'Amsterdam',
-    'dc4': 'Chandler1',
-    'dc8': 'Ashburn',
-    'dc21': 'Santa Clara',
-    'dc22': 'Dubai',
-    'dc23': 'Riyadh',
-    'Sydney': 'DC10',
-    'ROT': 'DC12, DC13',
-    'Shanghai': 'DC15',
-    'Biere': 'DC16',
-    'Toronto': 'DC17',
-    'Moscow': 'DC18',
-    'Sao Paulo': 'DC19',
-    'Amsterdam': 'DC2',
-    'Chandler1': 'DC4',
-    'Ashburn': 'DC8',
-    'Santa Clara': 'DC21',
-    'Dubai': 'DC22',
-    'Riyadh': 'DC23'
+    'sydney': 'DC10',
+    'rot': 'DC12, DC13',
+    'shanghai': 'DC15',
+    'biere': 'DC16',
+    'toronto': 'DC17',
+    'moscow': 'DC18',
+    'sao paulo': 'DC19',
+    'amsterdam': 'DC2',
+    'chandler1': 'DC4',
+    'ashburn': 'DC8',
+    'santa clara': 'DC21',
+    'dubai': 'DC22',
+    'riyadh': 'DC23'
 }
 
 
@@ -75,8 +47,10 @@ dcmap = ('dc10-> Sydney\n'
 
 
 def match(dc):
-    if dc in dcmap0:
-        return dcmap0[dc]
+    dct = dc.translate(None, "DCdc")
+    if dct in dcmap0:
+        return dcmap0[dct]
+    if dc.lower() in dcmap0:
+        return dcmap0[dc.lower()]
     else:
         return None
-
