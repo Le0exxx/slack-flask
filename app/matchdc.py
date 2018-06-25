@@ -47,7 +47,7 @@ dcmap = ('dc10-> Sydney\n'
 
 
 def match(dc):
-    dct = dc.translate(None, "DCdc")
+    dct = dc.translate(str.maketrans('', '', 'DCdc'))  #(None, "DCdc")
     if dct in dcmap0:
         return dcmap0[dct]
     if dc.lower() in dcmap0:
