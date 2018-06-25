@@ -11,7 +11,6 @@ def hello_world():
 def slash():
     if request.form['token'] == 'XVUMLgbFulZj6jF16Qk8J3cg':
         if request.form['text']:
-            if match(request.form['text']):
                 payload = {'text': match(request.form['text'])}
         else:
             payload = {'text': dcmap}
