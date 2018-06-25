@@ -13,8 +13,6 @@ def slash():
         if request.form['text']:
             if match(request.form['text']):
                 payload = {'text': match(request.form['text'])}
-            else:
-                payload = {'text': 'DC Not Found'}
         else:
             payload = {'text': dcmap}
         return jsonify(payload)
