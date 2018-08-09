@@ -9,7 +9,7 @@ def hello_world():
 
 @app.route('/dcmap', methods=['POST'])
 def slash():
-    if request.form['token'] == 'XVUMLgbFulZj6jF16Qk8J3cg':
+    if request.form['token'] == 'A1KQ1quNPDZxyUy25NxCyZld':
         if request.form['text']:
                 payload = {'text': match(request.form['text'])}
         else:
